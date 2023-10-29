@@ -14,12 +14,13 @@ const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [loading, setLoading] = useState(false)
+    
     const navigate = useNavigate()
     let location = useLocation();
     const redirect = location.search ? new URLSearchParams(location.search).get('redirect') : ''
-    // const notify = (error) => toast.error(error, {
-    //     position: toast.POSITION.BOTTOM_RIGHT
-    // });
+    const notify = (error) => toast.error(error, {
+        position: toast.POSITION.BOTTOM_RIGHT
+    });
 
     const login = async (email, password) => {
         try {
@@ -31,7 +32,7 @@ const Login = () => {
             const { data } = await axios.post(`${process.env.REACT_APP_API}/api/v1/login`, { email, password }, config)
             console.log(data)
             authenticate(data, () => navigate("/"))
-
+            
         } catch (error) {
             toast.error("invalid user or password", {
                 position: toast.POSITION.BOTTOM_RIGHT
@@ -57,8 +58,8 @@ const Login = () => {
 
                     <div className="row wrapper">
                         <div className="col-10 col-lg-5">
-                            <form className="shadow-lg"
-                                onSubmit={submitHandler}
+                            <form className="shadow-lg" 
+                            onSubmit={submitHandler}
                             >
                                 <h1 className="mb-3">Login</h1>
                                 <div className="form-group">

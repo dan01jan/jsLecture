@@ -30,7 +30,7 @@ const Register = () => {
            setError()
         }
 
-    }, [error, isAuthenticated,])
+    }, [error. isAuthenticated, navigate])
 
     const submitHandler = (e) => {
         e.preventDefault();
@@ -46,14 +46,18 @@ const Register = () => {
 
     const onChange = e => {
         if (e.target.name === 'avatar') {
+
             const reader = new FileReader();
+
             reader.onload = () => {
                 if (reader.readyState === 2) {
                     setAvatarPreview(reader.result)
                     setAvatar(reader.result)
                 }
             }
+
             reader.readAsDataURL(e.target.files[0])
+
         } else {
             setUser({ ...user, [e.target.name]: e.target.value })
         }
@@ -78,15 +82,17 @@ const Register = () => {
             setIsAuthenticated(false)
             setLoading(false)
             setUser(null)
-            setError(error)
-            console.log(error)
+            setError(error.response.data.message)
+            console.log(error.response.data.message)
         }
     }
 
 
     return (
         <Fragment>
+
             <Metadata title={'Register User'} />
+
             <div className="row wrapper">
                 <div className="col-10 col-lg-5">
                     <form className="shadow-lg" onSubmit={submitHandler} encType='multipart/form-data'>
