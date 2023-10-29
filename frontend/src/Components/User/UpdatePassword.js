@@ -1,6 +1,6 @@
 import React, { Fragment, useState, useEffect } from 'react'
 import { useNavigate } from "react-router-dom";
-import MetaData from '../Layout/MetaData';
+import Metadata from '../Layout/Metadata';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios';
@@ -60,7 +60,7 @@ const UpdatePassword = () => {
 
     return (
         <Fragment>
-            <MetaData title={'Change Password'} />
+            <Metadata title={'Change Password'} />
 
             <div className="row wrapper">
                 <div className="col-10 col-lg-5">

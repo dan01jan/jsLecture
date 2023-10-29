@@ -3,7 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom'
 import { Carousel } from 'react-bootstrap'
 
 import Loader from '../Layout/Loader'
-import MetaData from '../Layout/MetaData'
+import Metadata from '../Layout/Metadata'
 
 import axios from 'axios'
 import { toast, } from 'react-toastify';
@@ -31,7 +31,7 @@ const ProductDetails = ({cartItems, addItemToCart}) => {
     // const { cartItems } = state
 
     const productDetails = async (id) => {
-        let link = `http://localhost:4001/api/v1/product/${id}`
+        let link = `http://localhost:8001/api/v1/product/${id}`
         try {
             let res = await axios.get(link)
             setProduct(res.data.product)
@@ -83,7 +83,7 @@ const ProductDetails = ({cartItems, addItemToCart}) => {
 
             {loading ? <Loader /> : (
                 <Fragment>
-                    <MetaData title={product.name} />
+                    <Metadata title={product.name} />
                     <div className="row d-flex justify-content-around">
                         <div className="col-12 col-lg-5 img-fluid" id="product_image">
                             <Carousel pause='hover'>

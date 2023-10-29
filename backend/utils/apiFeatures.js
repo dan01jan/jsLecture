@@ -3,7 +3,7 @@ class APIFeatures {
         this.query = query;
         this.queryStr = queryStr;
     }
-    //http://localhost:4001/api/v1/products?keyword=usb&page=2
+    //http://localhost:8001/api/v1/products?keyword=usb&page=2
 
     search() {
         console.log(this.queryStr)

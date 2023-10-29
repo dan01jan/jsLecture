@@ -1,6 +1,6 @@
 import React, { Fragment, useEffect, useState } from 'react'
 import { useNavigate } from "react-router-dom";
-import MetaData from '../Layout/MetaData'
+import Metadata from '../Layout/Metadata'
 import CheckoutSteps from './CheckoutSteps'
 import axios from 'axios';
 import { toast } from 'react-toastify';
@@ -65,7 +65,7 @@ const Payment = ({cartItems, shippingInfo}) => {
 
     return (
         <Fragment>
-            <MetaData title={'Payment'} />
+            <Metadata title={'Payment'} />
             <CheckoutSteps shipping confirmOrder payment />
             <div className="row wrapper">
                 <div className="col-10 col-lg-5">

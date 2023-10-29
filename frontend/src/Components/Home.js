@@ -1,5 +1,5 @@
 import React, { Fragment, useState, useEffect } from 'react'
-import MetaData from './Layout/MetaData'
+import Metadata from './Layout/Metadata'
 import axios from 'axios'
 import Pagination from 'react-js-pagination'
 import Product from './Product/Product'
@@ -45,7 +45,7 @@ const Home = () => {
     const getProducts = async (page = 1, keyword = '', price, category='') => {
         let link = ''
 
-        link = `http://localhost:4001/api/v1/products/?page=${page}&keyword=${keyword}&price[lte]=${price[1]}&price[gte]=${price[0]}`
+        link = `http://localhost:8001/api/v1/products/?page=${page}&keyword=${keyword}&price[lte]=${price[1]}&price[gte]=${price[0]}`
         
         if (category) {
             link = `${process.env.REACT_APP_API}/api/v1/products?keyword=${keyword}&page=${currentPage}&price[lte]=${price[1]}&price[gte]=${price[0]}&category=${category}`
@@ -71,7 +71,7 @@ const Home = () => {
     return (
         <>
             {loading ? <Loader /> : (<Fragment>
-                <MetaData title={'Buy Best Products Online'} />
+                <Metadata title={'Buy Best Products Online'} />
                 <div className="container container-fluid">
 
                     <h1 id="products_heading">Latest Products</h1>

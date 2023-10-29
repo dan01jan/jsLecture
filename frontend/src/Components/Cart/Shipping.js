@@ -1,7 +1,7 @@
 import React, { Fragment, useState } from 'react'
 import { useNavigate } from "react-router-dom";
 import { countries } from 'countries-list'
-import MetaData from '../Layout/MetaData'
+import Metadata from '../Layout/Metadata'
 import CheckoutSteps from './CheckoutSteps'
 
 const Shipping = ({ shipping, saveShippingInfo }) => {
@@ -21,7 +21,7 @@ const Shipping = ({ shipping, saveShippingInfo }) => {
 
     return (
         <Fragment>
-            <MetaData title={'Shipping Info'} />
+            <Metadata title={'Shipping Info'} />
             <CheckoutSteps shipping />
             <div className="row wrapper">
                 <div className="col-10 col-lg-5">

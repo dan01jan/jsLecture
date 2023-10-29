@@ -1,5 +1,5 @@
 import React, { Fragment, useState, useEffect } from 'react'
-import MetaData from '../Layout/MetaData'
+import Metadata from '../Layout/Metadata'
 import { useNavigate } from "react-router-dom";
 import axios from 'axios';
 import { toast } from 'react-toastify';
@@ -96,7 +96,7 @@ const UpdateProfile = () => {
   console.log(user)
   return (
     <Fragment>
-      <MetaData title={'Update Profile'} />
+      <Metadata title={'Update Profile'} />
 
       <div className="row wrapper">
         <div className="col-10 col-lg-5">

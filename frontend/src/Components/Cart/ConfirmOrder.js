@@ -1,6 +1,6 @@
 import React, { Fragment, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import MetaData from '../Layout/MetaData'
+import Metadata from '../Layout/Metadata'
 import CheckoutSteps from './CheckoutSteps'
 import { getUser } from '../../utils/helpers'
 const ConfirmOrder = ({cartItems, shippingInfo}) => {
@@ -26,7 +26,7 @@ const ConfirmOrder = ({cartItems, shippingInfo}) => {
 
     return (
         <Fragment>
-            <MetaData title={'Confirm Order'} />
+            <Metadata title={'Confirm Order'} />
             <CheckoutSteps shipping confirmOrder />
             <div className="row d-flex justify-content-between">
                 <div className="col-12 col-lg-8 mt-5 order-confirm">

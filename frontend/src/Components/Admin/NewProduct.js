@@ -1,6 +1,6 @@
 import React, { Fragment, useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import MetaData from '../Layout/MetaData'
+import Metadata from '../Layout/Metadata'
 import Sidebar from './SideBar'
 import { getToken } from '../../utils/helpers';
 import axios from 'axios'
@@ -115,7 +115,7 @@ const NewProduct = () => {
 
     return (
         <Fragment>
-            <MetaData title={'New Product'} />
+            <Metadata title={'New Product'} />
             <div className="row">
                 <div className="col-12 col-md-2">
                     <Sidebar />

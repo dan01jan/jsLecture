@@ -1,6 +1,6 @@
 import React, { Fragment, useState,} from 'react'
 
-import MetaData from '../Layout/MetaData'
+import Metadata from '../Layout/Metadata'
 import axios from 'axios'
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -46,7 +46,7 @@ const ForgotPassword = () => {
 
     return (
         <Fragment>
-            <MetaData title={'Forgot Password'} />
+            <Metadata title={'Forgot Password'} />
             <div className="row wrapper">
                 <div className="col-10 col-lg-5">
                     <form className="shadow-lg" onSubmit={submitHandler}>

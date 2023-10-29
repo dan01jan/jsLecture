@@ -1,7 +1,7 @@
 import React, { Fragment, useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 
-import MetaData from '../Layout/MetaData'
+import Metadata from '../Layout/Metadata'
 import Loader from '../Layout/Loader'
 import axios from 'axios'
 import { toast } from 'react-toastify';
@@ -51,7 +51,7 @@ const OrderDetails = () => {
 
     return (
         <Fragment>
-            <MetaData title={'Order Details'} />
+            <Metadata title={'Order Details'} />
 
             {loading ? <Loader /> : (
                 <Fragment>

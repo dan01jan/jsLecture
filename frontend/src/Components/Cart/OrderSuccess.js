@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
 import { Link } from 'react-router-dom'
-import MetaData from '../Layout/MetaData'
+import Metadata from '../Layout/Metadata'
 
 const OrderSuccess = () => {
     sessionStorage.removeItem('orderInfo');
@@ -10,7 +10,7 @@ const OrderSuccess = () => {
     return (
         <Fragment>
 
-            <MetaData title={'Order Success'} />
+            <Metadata title={'Order Success'} />
 
             <div className="row justify-content-center">
                 <div className="col-6 mt-5 text-center">

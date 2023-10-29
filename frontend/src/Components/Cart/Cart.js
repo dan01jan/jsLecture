@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
 import { Link } from 'react-router-dom'
-import MetaData from '../Layout/MetaData'
+import Metadata from '../Layout/Metadata'
 import { useParams, useNavigate } from 'react-router-dom'
 
 const Cart = ({ addItemToCart, cartItems, removeItemFromCart }) => {
@@ -28,7 +28,7 @@ const Cart = ({ addItemToCart, cartItems, removeItemFromCart }) => {
 
     return (
         <Fragment>
-            <MetaData title={'Your Cart'} />
+            <Metadata title={'Your Cart'} />
             {cartItems.length === 0 ? <h2 className="mt-5">Your Cart is Empty</h2> : (
                 <Fragment>
                     <h2 className="mt-5">Your Cart: <b>{cartItems.length} items</b></h2>

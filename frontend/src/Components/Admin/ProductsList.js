@@ -2,7 +2,7 @@ import React, { Fragment, useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { MDBDataTable } from 'mdbreact'
 
-import MetaData from '../Layout/MetaData'
+import Metadata from '../Layout/Metadata'
 import Loader from '../Layout/Loader'
 import Sidebar from './SideBar'
 import { getToken } from '../../utils/helpers';
@@ -146,7 +146,7 @@ const ProductsList = () => {
 
     return (
         <Fragment>
-            <MetaData title={'All Products'} />
+            <Metadata title={'All Products'} />
             <div className="row">
                 <div className="col-12 col-md-2">
                     <Sidebar />

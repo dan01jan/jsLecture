@@ -2,7 +2,7 @@ import React, { Fragment, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { MDBDataTable } from 'mdbreact'
 
-import MetaData from '../Layout/MetaData'
+import Metadata from '../Layout/Metadata'
 import Loader from '../Layout/Loader'
 import axios from 'axios'
 import { toast } from 'react-toastify';
@@ -92,7 +92,7 @@ const ListOrders = () => {
 
     return (
         <Fragment>
-            <MetaData title={'My Orders'} />
+            <Metadata title={'My Orders'} />
             <h1 className="my-5">My Orders</h1>
             {loading ? <Loader /> : (
                 <MDBDataTable

@@ -1,6 +1,6 @@
 import React, { Fragment, useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import Metadata from '../Layout/MetaData'
+import Metadata from '../Layout/Metadata'
 import axios from 'axios'
 
 const Register = () => {

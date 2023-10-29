@@ -1,7 +1,7 @@
 import React, { Fragment, useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Loader from '../Layout/Loader'
-import MetaData from '../Layout/MetaData'
+import Metadata from '../Layout/Metadata'
 import axios from 'axios';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -41,7 +41,7 @@ const Profile = () => {
     <Fragment>
       {loading ? <Loader /> : (
         <Fragment>
-          <MetaData title={'Your Profile'} />
+          <Metadata title={'Your Profile'} />
 
           <h2 className="mt-5 ml-5">My Profile</h2>
           <div className="row justify-content-around mt-5 user-info">
